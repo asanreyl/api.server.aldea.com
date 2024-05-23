@@ -8,9 +8,9 @@ const api = express.Router();
 const phReadingsController = require('../controllers/phreadings');
 
 // Generamos la rutas
-api.post('/ph', phReadingsController.savePhReading);
-api.post('/ph/id', phReadingsController.savePhReading);
-api.delete('/ph', phReadingsController.deletePhReading);
+api.post('/savePh', phReadingsController.savePhReading);
+api.post('/savePh', phReadingsController.savePhReading);
+api.delete('/deletePh', phReadingsController.deletePhReading);
 
 
 // Exportamos el módulo de rutas

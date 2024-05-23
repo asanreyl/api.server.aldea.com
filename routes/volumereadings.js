@@ -8,9 +8,9 @@ const api = express.Router();
 const volumeController = require('../controllers/volumereadings');
 
 // Generamos la rutas
-api.post('/volume', volumeController.saveVolume);
-api.post('/volume/id', volumeController.saveVolume);
-api.delete('/volume', volumeController.deleteVolume);
+api.post('/saveVolume', volumeController.saveVolume);
+api.post('/saveVolume', volumeController.saveVolume);
+api.delete('/deleteVolume', volumeController.deleteVolume);
 
 
 // Exportamos el módulo de rutas

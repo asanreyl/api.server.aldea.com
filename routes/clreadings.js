@@ -8,9 +8,9 @@ const api = express.Router();
 const clReadingsController = require('../controllers/clreadings');
 
 // Generamos la rutas
-api.post('/cl', clReadingsController.saveClReading);
-api.post('/cl/id', clReadingsController.saveClReading);
-api.delete('/cl', clReadingsController.deleteClReading);
+api.post('/saveCl', clReadingsController.saveClReading);
+api.post('/saveCl', clReadingsController.saveClReading);
+api.delete('/deleteCl', clReadingsController.deleteClReading);
 
 
 // Exportamos el módulo de rutas
