@@ -29,6 +29,7 @@ exports.saveVolume = (async (req, res)=>{
 
   const sqlProcedure = 'call saveVolume (?)'; 
   const _request = JSON.stringify(req.body); 
+  console.log(_request)
   try {
     [result, fields] =  await pool.query(sqlProcedure, [_request]);
     if (result[0]&&result[0][0]&&result[0][0]['data_json']){

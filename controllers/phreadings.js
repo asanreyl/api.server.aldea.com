@@ -5,11 +5,11 @@ const { logAction }= require('../globals/globals');
 // Borrar lecturas de cloro
 exports.deletePhReading = (async (req, res)=>{
 
-  logAction('Borrar lectura de ph.')
+
 
   const sqlProcedure = 'call deletePh (?)'; 
   const _request = JSON.stringify(req.body); 
-    
+  console.log(_request)
   try {
     [result] =  await pool.query(sqlProcedure, [_request]);
     let data = result['affectedRows'];

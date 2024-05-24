@@ -9,7 +9,7 @@ exports.deleteClReading = (async (req, res)=>{
 
   const sqlProcedure = 'call deleteCl (?)'; 
   const _request = JSON.stringify(req.body); 
-    
+
   try {
     [result] =  await pool.query(sqlProcedure, [_request]);
     let data = result['affectedRows'];
@@ -29,6 +29,7 @@ exports.saveClReading = (async (req, res)=>{
 
   const sqlProcedure = 'call saveCl (?)'; 
   const _request = JSON.stringify(req.body); 
+  console.log(_request)
   try {
     [result, fields] =  await pool.query(sqlProcedure, [_request]);
     if (result[0]&&result[0][0]&&result[0][0]['data_json']){
